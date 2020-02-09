@@ -1,10 +1,12 @@
 # QUINCE ZSH Theme - based on 'acrit'
 
-PROMPT='
-$(_user_host)${_current_dir} $(git_prompt_info)$(git_prompt_status)$(git_commits_ahead)$(git_commits_behind) %{$fg[$CARETCOLOR]%}%{$resetcolor%} '
+# standard prompt
+PROMPT='$(_user_host)${_current_dir} $(git_prompt_info)$(git_prompt_status)$(git_commits_ahead)$(git_commits_behind) %{$fg[$CARETCOLOR]%}%{$resetcolor%} '
 
-PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
+# prompt for input
+# PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
 
+# right aligned prompt info
 # RPROMPT='$(_vi_status)%{$(echotc UP 1)%}$(_git_time_since_commit) $(git_prompt_status) ${_return_status}%{$(echotc DO 1)%}'
 RPROMPT=''
 
