@@ -1,7 +1,7 @@
 # QUINCE ZSH Theme - based on 'acrit'
 
 # standard prompt
-PROMPT='$(_user_host)${_current_dir} $(git_prompt_info)$(git_prompt_status)$(git_commits_ahead)$(git_commits_behind) %{$fg[$CARETCOLOR]%}%{$resetcolor%} '
+PROMPT='$(_user_host)${_current_dir} $(git_prompt_info)$(git_prompt_status)$(git_commits_ahead)$(git_commits_behind)$(_git_initials) %{$fg[$CARETCOLOR]%}%{$resetcolor%} '
 
 # prompt for input
 # PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
@@ -67,6 +67,13 @@ function _git_time_since_commit() {
 
     color=$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL
     echo "$color$commit_age%{$reset_color%}"
+  fi
+}
+
+function _git_initials {
+  local initials=$(git mob-print --initials)
+  if [[ -n "${initials}" ]]; then
+    echo " [${initials}]"
   fi
 }
 
