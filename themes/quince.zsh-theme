@@ -1,7 +1,7 @@
 # QUINCE ZSH Theme - based on 'acrit'
 
 # standard prompt
-PROMPT='$(_user_host)${_current_dir} $(git_prompt_info)$(git_prompt_status)$(git_commits_ahead)$(git_commits_behind)$(_git_initials) %{$fg[$CARETCOLOR]%}%{$resetcolor%} '
+PROMPT='$(_user_host)${_current_dir} $(git_pairing_branch)$(git_pairing_initials)%{$fg[$CARETCOLOR]%}%{$resetcolor%} '
 
 # prompt for input
 # PROMPT2='%{$fg[$CARETCOLOR]%}◀%{$reset_color%} '
@@ -11,17 +11,18 @@ PROMPT='$(_user_host)${_current_dir} $(git_prompt_info)$(git_prompt_status)$(git
 RPROMPT=''
 
 local _current_dir="%{$fg_bold[blue]%}%3~%{$reset_color%} "
+local _git_pair_initials="git_pair_initials"
 local _return_status="%{$fg_bold[red]%}%(?..⍉)%{$reset_color%}"
 local _hist_no="%{$fg[grey]%}%h%{$reset_color%}"
 
-function _current_dir() {
-  local _max_pwd_length="65"
-  if [[ $(echo -n $PWD | wc -c) -gt ${_max_pwd_length} ]]; then
-    echo "%{$fg_bold[blue]%}%-2~ ... %3~%{$reset_color%} "
-  else
-    echo "%{$fg_bold[blue]%}%~%{$reset_color%} "
-  fi
-}
+# function _current_dir() {
+#   local _max_pwd_length="65"
+#   if [[ $(echo -n $PWD | wc -c) -gt ${_max_pwd_length} ]]; then
+#     echo "%{$fg_bold[blue]%}%-2~ ... %3~%{$reset_color%} "
+#   else
+#     echo "%{$fg_bold[blue]%}%~%{$reset_color%} "
+#   fi
+# }
 
 function _user_host() {
   if [[ -n $SSH_CONNECTION ]]; then
@@ -67,13 +68,6 @@ function _git_time_since_commit() {
 
     color=$ZSH_THEME_GIT_TIME_SINCE_COMMIT_NEUTRAL
     echo "$color$commit_age%{$reset_color%}"
-  fi
-}
-
-function _git_initials {
-  local initials=$(git mob-print --initials)
-  if [[ -n "${initials}" ]]; then
-    echo " [${initials}]"
   fi
 }
 
