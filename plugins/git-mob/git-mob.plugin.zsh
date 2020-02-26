@@ -6,5 +6,6 @@ function mobit() {
   git mob --installTemplate
   if [ -f $SCRIPT_DIR/prepare-commit-msg ]; then
     cp $SCRIPT_DIR/prepare-commit-msg $CURR_DIR/.git/hooks
+    chmod +x $CURR_DIR/.git/hooks/prepare-commit-msg
   fi
 }
