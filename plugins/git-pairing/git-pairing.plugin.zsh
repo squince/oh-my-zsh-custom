@@ -1,3 +1,4 @@
+# vi: set ft=sh :
 # git pairing prompt support
 # - based on git-prompt.sh @ https://github.com/git/git/tree/master/contrib/completion
 
@@ -57,8 +58,8 @@ function git_pairing_branch () {
     b_prompt="[${b}${ahead_r}${behind_r}${u_prompt}]"
   fi
   if [ -n "$s" ]; then
-     echo "${c_red}${b_prompt} "
+     echo "${c_red}${b_prompt}"
   else
-     echo "${c_green}${b_prompt} "
+     echo "${c_green}${b_prompt}"
   fi
 }
