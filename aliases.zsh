@@ -1,5 +1,6 @@
 # My Custom Aliases for ZSH
-alias myip="curl http://ipecho.net/plain; echo"
+alias getmyip="curl http://ipecho.net/plain; echo"
+alias myip="echo 'curl http://ipecho.net/plain; echo'"
 alias zedit="vi ~/.zshrc"
 alias upzed="source ~/.zshrc"
 alias usage="du -h -d1 | sort -rh"
@@ -35,6 +36,7 @@ alias gitbranches="git for-each-ref --format='%(committerdate) %09 %(authorname)
 alias gitgraph="git log --graph --oneline"
 alias gitupstream="git log --oneline --no-merges"
 alias gl="git log --graph --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n%w(0,4,4)%-b%n%n%-N'"
+alias newauthor="git add-coauthor"
 
 # Work Stuff
 #alias vpn="nvm use v6.2.1 && sudo vpn-client" # Ben VPN
@@ -52,4 +54,3 @@ alias tokenize="node ~/TOOLS/tokenize.js"
 alias decodetoken="node ~/TOOLS/decodeToken.js"
 alias mixevents="ag \"onclick=\"mixpanel.track\(('[A-z ]*')\" -o --heading | grep onclick | awk -F\' '{print $2}' | sort"
 alias devship="ssh admiral@squince.dev.glgresearch.com"
-
