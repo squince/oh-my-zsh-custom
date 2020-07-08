@@ -54,3 +54,4 @@ alias tokenize="node ~/TOOLS/tokenize.js"
 alias decodetoken="node ~/TOOLS/decodeToken.js"
 alias mixevents="ag \"onclick=\"mixpanel.track\(('[A-z ]*')\" -o --heading | grep onclick | awk -F\' '{print $2}' | sort"
 alias devship="ssh admiral@squince.dev.glgresearch.com"
+alias apluswhitelist='sudo glgroup sql whitelist add --subscription "GLG Azure Services" --server "glg-dev-server"'
