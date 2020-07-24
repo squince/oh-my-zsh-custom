@@ -33,7 +33,8 @@ alias shebang='echo "#!/usr/bin/env bash"'
 # git stuffs
 alias gitching="git whatchanged | grep -A 4 commit | less"
 alias gitbranches="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
-alias gitgraph="git log --graph --oneline"
+#alias gitgraph="git log --graph --decorate --oneline"
+alias gitgraph="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)%aD%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
 alias gitupstream="git log --oneline --no-merges"
 alias gl="git log --graph --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n%w(0,4,4)%-b%n%n%-N'"
 alias newauthor="git add-coauthor"
