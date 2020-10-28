@@ -29,22 +29,23 @@ alias bkuphome="cd ~/ && ./.squince_backup_script.sh"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias shebang='echo "#!/usr/bin/env bash"'
 alias killstreamliner="ps ax | grep 9090 | cut -f 1 -d ' ' | xargs kill -9"
+# alias killvpn="ps ax | grep -v grep | grep -i vpn | cut -f 1 -d ' ' | xargs kill -9"
 
 
 # git stuffs
 alias gitching="git whatchanged | grep -A 4 commit | less"
 alias gitbranches="git for-each-ref --format='%(committerdate) %09 %(authorname) %09 %(refname)' | sort -k5n -k2M -k3n -k4n"
-#alias gitgraph="git log --graph --decorate --oneline"
+# alias gitgraph="git log --graph --decorate --oneline"
 alias gitgraph="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)%aD%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(auto)%d%C(reset)'"
 alias gitupstream="git log --oneline --no-merges"
 alias gl="git log --graph --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n%w(0,4,4)%-b%n%n%-N'"
 alias newauthor="git add-coauthor"
 
 # Work Stuff
-#alias vpn="nvm use v6.2.1 && sudo vpn-client" # Ben VPN
-#alias vpn="sudo openconnect mrx.glgroup.com
-#alias vpn="sudo vpn-client"
-alias vpn="nvm use 10.15.1 && sudo glgroup openvpn"
+# alias vpn="nvm use v6.2.1 && sudo vpn-client" # Ben VPN
+# alias vpn="sudo openconnect mrx.glgroup.com"
+# alias vpn="sudo vpn-client"
+alias vpn="nvm use 10.15.1 && sudo glgroup wireguard"
 alias shipup="glgroup devship create --branch squince --headquarters 'git@github.com:glg/ec2.starphleet.dev.headquarters.git'"
 alias dbup="glgroup devdb create"
 alias jups="source activate giftcards && source ./etc/env.sh && jupyter notebook"
