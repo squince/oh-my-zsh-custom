@@ -47,6 +47,7 @@ alias newauthor="git add-coauthor"
 # alias vpn="sudo vpn-client"
 alias vpn="nvm use 10.15.1 && sudo glgroup wireguard"
 alias shipup="glgroup devship create --branch squince --headquarters 'git@github.com:glg/ec2.starphleet.dev.headquarters.git'"
+alias shipout="glgroup devship delete"
 alias dbup="glgroup devdb create"
 alias jups="source activate giftcards && source ./etc/env.sh && jupyter notebook"
 alias newprod="source activate newproducts && source ./etc/env.sh && jupyter notebook"
@@ -58,3 +59,4 @@ alias decodetoken="node ~/TOOLS/decodeToken.js"
 alias mixevents="ag \"onclick=\"mixpanel.track\(('[A-z ]*')\" -o --heading | grep onclick | awk -F\' '{print $2}' | sort"
 alias devship="ssh admiral@squince.dev.glgresearch.com"
 alias apluswhitelist='sudo glgroup sql whitelist add --subscription "GLG Azure Services" --server "glg-dev-server"'
+alias cpsharedlib='rm -rf ./node_modules/@glg/cx-shared-lib && pushd ~/github/glg/cx-shared-lib/ && nvmit && npm run build && popd && nvmit && cp -rf ~/github/glg/cx-shared-lib ./node_modules/@glg/'
