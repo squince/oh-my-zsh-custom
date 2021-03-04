@@ -40,6 +40,9 @@ alias gitgraph="git log --graph --abbrev-commit --decorate --format=format:'%C(b
 alias gitupstream="git log --oneline --no-merges"
 alias gl="git log --graph --date=relative --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n%w(0,4,4)%-b%n%n%-N'"
 alias newauthor="git add-coauthor"
+alias appbranches="ag autodeploy | grep -v master | grep -v canary | grep -v deploy2 | grep -v modifiedForCXHomeStaging | grep -v main | grep -v clientStaging | grep -v clientDemo | grep -v faker-proxy | grep -v epiquery-templates"
+alias epibranches="ag BRANCH="
+alias hqbranches="clear; appbranches; epibranches"
 
 # Work Stuff
 # alias vpn="nvm use v6.2.1 && sudo vpn-client" # Ben VPN
