@@ -8,6 +8,9 @@ export SMTP_SERVER=127.0.0.1
 export OVERRIDE_EMAIL_RECIPIENT=squince@glgroup.com
 export LOGIN_EMAIL_RECIPIENT=squince@glgroup.com
 
+#export SQLDEV_USER='squince'
+#export SQLDEV_PWD='AlexCate0921!'
+
 # EXPORT PATH VARIABLES
 # *********************
 
