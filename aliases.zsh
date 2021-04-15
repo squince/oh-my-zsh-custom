@@ -28,7 +28,7 @@ alias xcodeaccept="sudo xcodebuild -license accept"
 alias bkuphome="cd ~/ && ./.squince_backup_script.sh"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias shebang='echo "#!/usr/bin/env bash"'
-alias killstreamliner="ps ax | grep 9090 | cut -f 1 -d ' ' | xargs kill -9 ; rm -rf /tmp/ec2.starphleet.headquarters"
+alias killstreamliner="ps ax | grep 9090 | grep -v grep | cut -f 1 -d ' ' | xargs kill -9 ; rm -rf /tmp/ec2.starphleet.headquarters"
 # alias killvpn="ps ax | grep -v grep | grep -i vpn | cut -f 1 -d ' ' | xargs kill -9"
 
 
