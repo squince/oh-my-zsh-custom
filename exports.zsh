@@ -25,3 +25,7 @@ export SQLDEV_PWD='AlexCate0921!'
 # NPM GIT SECURITY CRAP
 # *********************
 export GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa'
+
+# used for doing npm builds that require private github repos inside of a docker container
+export DOCKER_GITHUB_SSH_PATH=~/.ssh/dockergithub
+export GLG_GITHUB_SSH_KEY=~/.ssh/dockergithub

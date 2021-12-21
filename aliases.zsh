@@ -57,13 +57,13 @@ alias shipup="glgroup devship create --branch squince --headquarters 'git@github
 alias demoup="glgroup devship create --branch 'client-demo' --headquarters 'git@github.com:glg/ec2.starphleet.dev.headquarters.git'"
 alias shipout="glgroup devship delete"
 alias dbup="glgroup devdb create"
-alias jups="source activate giftcards && source ./etc/env.sh && jupyter notebook"
-alias newprod="source activate newproducts && source ./etc/env.sh && jupyter notebook"
-alias dealspec="source activate dealspec && source ./etc/env && jupyter notebook"
-alias myml="source activate myml && jupyter notebook"
 alias gcsrc="source activate giftcards && conda env list"
 alias tokenize="node ~/TOOLS/tokenize.js"
 alias decodetoken="node ~/TOOLS/decodeToken.js"
 alias mixevents="ag \"onclick=\"mixpanel.track\(('[A-z ]*')\" -o --heading | grep onclick | awk -F\' '{print $2}' | sort"
 alias apluswhitelist='sudo glgroup sql whitelist add --subscription "GLG Azure Services" --server "glg-dev-server"'
 alias cpsharedlib='rm -rf ./node_modules/@glg/cx-shared-lib && pushd ~/github/glg/cx-shared-lib/ && nvmit && npm run build && popd && nvmit && cp -rf ~/github/glg/cx-shared-lib ./node_modules/@glg/'
+
+# Docker Stuff
+alias buildlistings="./bin/build-docker.sh && docker build -f Dockerfile.dev -t cx-app-projects-listing --build-arg "GITHUB_SSH_KEY=$GITHUB_SSH_KEY" ."
+alias attachlistings="docker run -it cx-app-projects-listing sh"
