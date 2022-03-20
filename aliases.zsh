@@ -7,21 +7,21 @@ alias usage="du -h -d1 | sort -rh"
 alias port="lsof -i "
 
 # ToDo.sh
-alias td='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh'
-alias tdp='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh -d ~/.ptodo.cfg'
-alias tdm='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh -d ~/.metodo.cfg'
-alias tds='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh -d ~/.ec2todo.cfg'
-alias tdl='clear; /usr/local/Cellar/todo-txt/2.10/bin/todo.sh ls'
-alias tdpl='clear; /usr/local/Cellar/todo-txt/2.10/bin/todo.sh -d ~/.ptodo.cfg ls'
-alias tdml='clear; /usr/local/Cellar/todo-txt/2.10/bin/todo.sh -d ~/.metodo.cfg ls'
-alias tdsl='clear; /usr/local/Cellar/todo-txt/2.10/bin/todo.sh -d ~/.ec2todo.cfg ls'
-alias todo='/usr/local/Cellar/todo-txt/2.10/bin/todo.sh'
+alias td='/opt/homebrew/bin/todo.sh'
+alias tdp='/opt/homebrew/bin/todo.sh -d ~/.ptodo.cfg'
+alias tdm='/opt/homebrew/bin/todo.sh -d ~/.metodo.cfg'
+alias tds='/opt/homebrew/bin/todo.sh -d ~/.ec2todo.cfg'
+alias tdl='clear; /opt/homebrew/bin/todo.sh ls'
+alias tdpl='clear; /opt/homebrew/bin/todo.sh -d ~/.ptodo.cfg ls'
+alias tdml='clear; /opt/homebrew/bin/todo.sh -d ~/.metodo.cfg ls'
+alias tdsl='clear; /opt/homebrew/bin/todo.sh -d ~/.ec2todo.cfg ls'
+alias todo='/opt/homebrew/bin/todo.sh'
 
 # Environment Stuff
 alias ll='ls -lhaFG'
 alias llc='clear && ls -lhaFG'
-alias vi='/Applications/MacVim.app/Contents/MacOS/Vim'
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim'
+alias vi='/opt/homebrew/bin/vim'
+alias vim='/opt/homebrew/bin/vim'
 alias ports="netstat -a | grep LISTEN"
 alias listen="lsof -n -i4TCP:"
 alias xcodeaccept="sudo xcodebuild -license accept"
