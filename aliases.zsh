@@ -5,6 +5,7 @@ alias zedit="vi ~/.zshrc"
 alias upzed="source ~/.zshrc"
 alias usage="du -h -d1 | sort -rh"
 alias port="lsof -i "
+# alias clear="clear & printf '\e[2J\e[3J\e[H'"
 
 # ToDo.sh
 alias td='/opt/homebrew/bin/todo.sh'
@@ -28,7 +29,7 @@ alias xcodeaccept="sudo xcodebuild -license accept"
 alias bkuphome="cd ~/ && ./.squince_backup_script.sh"
 alias icloud="cd ~/Library/Mobile\ Documents/com~apple~CloudDocs"
 alias shebang='echo "#!/usr/bin/env bash"'
-alias killstreamliner="ps ax | grep 9090 | grep -v grep | cut -f 1 -d ' ' | xargs kill -9 ; rm -rf /tmp/ec2.starphleet.headquarters"
+alias killstreamliner="ps ax | grep 9090 | grep -v grep | cut -f 2 -d ' ' | xargs kill -9 ; rm -rf /tmp/ec2.starphleet.headquarters"
 # alias killvpn="ps ax | grep -v grep | grep -i vpn | cut -f 1 -d ' ' | xargs kill -9"
 
 
@@ -63,6 +64,8 @@ alias decodetoken="node ~/TOOLS/decodeToken.js"
 alias mixevents="ag \"onclick=\"mixpanel.track\(('[A-z ]*')\" -o --heading | grep onclick | awk -F\' '{print $2}' | sort"
 alias apluswhitelist='sudo glgroup sql whitelist add --subscription "GLG Azure Services" --server "glg-dev-server"'
 alias cpsharedlib='rm -rf ./node_modules/@glg/cx-shared-lib && pushd ~/github/glg/cx-shared-lib/ && nvmit && npm run build && popd && nvmit && cp -rf ~/github/glg/cx-shared-lib ./node_modules/@glg/'
+alias datahubaccess='glgroup sql login tempAccess --server datahub'
+alias sqldevaccess='glgroup sql login tempAccess --server sqldev'
 
 # Docker Stuff
 alias buildlistings="./bin/build-docker.sh && docker build -f Dockerfile.dev -t cx-app-projects-listing --build-arg "GITHUB_SSH_KEY=$GITHUB_SSH_KEY" ."
